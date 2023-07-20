@@ -1,13 +1,13 @@
 import cv2
 import numpy as np
 
-net = cv2.dnn.readNet("darknet/yolov3.weights", "darknet/cfg/yolov3.cfg")
-with open("darknet/data/coco.names") as f:
+net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+with open("coco.names") as f:
     classes = [line.strip() for line in f]
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
 
-cap = cv2.VideoCapture("/Users/goldenphi/Downloads/test2.mp4")
+cap = cv2.VideoCapture("test.mp4")
 while cap.isOpened():
     ret_, frame = cap.read()
     frame = cv2.resize(frame, None, fx=0.4, fy=0.4)
