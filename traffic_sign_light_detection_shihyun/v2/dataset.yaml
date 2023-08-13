@@ -1,0 +1,17 @@
+# Train/val/test sets
+path: ../datasets/traffic_lights_signs  # dataset root dir
+train: images/train_1280_720_daylight_1  # train images (relative to 'path')
+val: images/validation_1280_720_daylight_1  # val images (relative to 'path')
+test:  # test images (optional)
+
+# Classes
+names:
+  0: traffic_sign_warning
+  1: traffic_sign_restriction
+  2: traffic_sign_instruction
+  3: traffic_light_car_red
+  4: traffic_light_car_yellow
+  5: traffic_light_car_green
+  6: traffic_light_car_left_arrow
+  7: traffic_light_pedestrian_red
+  8: traffic_light_pedestrian_green
